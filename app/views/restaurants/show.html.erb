@@ -1,7 +1,7 @@
 <%= render "navbar"%>
 
 
-<div class="container">
+<div class="container mt-3">
   <div class="card">
     <%= @restaurant.name %>
     @
@@ -10,3 +10,22 @@
   </div>
 </div>
 
+<%= link_to "Delete #{@restaurant.name}",
+            restaurant_path(@restaurant),
+            class: "btn btn-danger d-flex justify-content-center m-3",
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+
+<%= link_to "post review", new_restaurant_review_path(@restaurant), class: "btn btn-primary d-flex justify-content-center m-3"%>
+
+<% @restaurant.reviews.each do |review| %>
+
+
+<div class="card d-flex justify-content-center m-2">
+  <h6>REVIEW - <%= review.rating %> / 5 </h6>
+  <p><%= review.content %></p>
+</div>
+
+
+<% end %>
