@@ -25,7 +25,15 @@
 <div class="card d-flex justify-content-center m-2">
   <h6>REVIEW - <%= review.rating %> / 5 </h6>
   <p><%= review.content %></p>
+      <p><%= link_to "Remove Review",
+                  review_path(review),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+    </p>
+
 </div>
 
 
 <% end %>
+
+
