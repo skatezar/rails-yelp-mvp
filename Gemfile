@@ -39,6 +39,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+#new gems added by kitt
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.6.1'
+gem 'simple_form'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]

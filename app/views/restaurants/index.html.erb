@@ -1,0 +1,16 @@
+
+<%= render "navbar"%>
+<div class="container">
+  <% @restaurants.each do |restaurant| %>
+
+  <div class="card m-3" style="border: 1px solid black;">
+     <h6 class="text-center"><%= restaurant.name %></h6>
+     <p>location: <%= restaurant.address %> </p>
+     <p>category: <%= restaurant.category %></p>
+
+     <%= link_to "details", restaurant_path(restaurant), class: "btn btn-primary"%>
+  </div>
+
+  <% end %>
+</div>
+
